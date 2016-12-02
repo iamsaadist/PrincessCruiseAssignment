@@ -55,14 +55,14 @@ namespace PrincessCruise
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1355660094457855",
+              appSecret: "22b0c95067014467857931c3a367071f");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
             //    ClientId = "",
-            //    ClientSecret = ""
+            //    ClientSecret = "KVK09l2gSTFD3Re8sSUsRByYZKg"
             //});
         }
     }

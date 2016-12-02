@@ -332,6 +332,7 @@ input,
 select[multiple],
 textarea {
   background-image: none;
+    width: 717px;
 }
 
 a {
@@ -762,6 +763,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+    width: 2099px;
 }
 
 .container:before,
@@ -4170,8 +4172,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
-  right: 0;
-  left: 0;
+  right: 1px;
+  left: -1px;
   border-width: 0 0 1px;
 }
 
@@ -4183,7 +4185,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-fixed-top {
-  top: 0;
+  top: 0px;
   z-index: 1030;
 }
 
@@ -4508,6 +4510,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-brand {
   color: #999999;
+    height: 20px;
+    width: 209px;
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -4546,6 +4550,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-toggle {
   border-color: #333333;
+    top: 0px;
+    left: 0px;
 }
 
 .navbar-inverse .navbar-toggle:hover,

@@ -58,7 +58,7 @@
 
         <div class="col-md-4">
             <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
+                <div><uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" /></div>
             </section>
         </div>
     </div>

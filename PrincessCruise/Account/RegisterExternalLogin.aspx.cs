@@ -75,7 +75,7 @@ namespace PrincessCruise.Account
                 }
                 else
                 {
-                    email.Text = loginInfo.Email;
+                    Username.Text = loginInfo.DefaultUserName;
                 }
             }
         }        
@@ -93,7 +93,7 @@ namespace PrincessCruise.Account
             }
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = email.Text, Email = email.Text };
+            var user = new ApplicationUser() { UserName = Username.Text, Email = Username.Text };
             IdentityResult result = manager.Create(user);
             if (result.Succeeded)
             {

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Register an external login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterExternalLogin.aspx.cs" Inherits="PrincessCruise.Account.RegisterExternalLogin" Async="true" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-<h3>Register with your <%: ProviderName %> account</h3>
+    <h3>Register with your <%: ProviderName %> account</h3>
 
     <asp:PlaceHolder runat="server">
         <div class="form-horizontal">
@@ -14,12 +14,13 @@
             </p>
 
             <div class="form-group">
-                <asp:Label runat="server" AssociatedControlID="email" CssClass="col-md-2 control-label">Email</asp:Label>
+           <%--     <asp:Label runat="server" AssociatedControlID="email" CssClass="col-md-2 control-label">Email</asp:Label>--%>
+                 <asp:Label runat="server" AssociatedControlID="Username" CssClass="col-md-2 control-label">Username</asp:Label><a href="Login.aspx">Login.aspx</a>
                 <div class="col-md-10">
-                    <asp:TextBox runat="server" ID="email" CssClass="form-control" TextMode="Email" />
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="email"
-                        Display="Dynamic" CssClass="text-danger" ErrorMessage="Email is required" />
-                    <asp:ModelErrorMessage runat="server" ModelStateKey="email" CssClass="text-error" />
+                    <asp:TextBox runat="server" ID="Username" CssClass="form-control" TextMode="Email" />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="Username"
+                        Display="Dynamic" CssClass="text-danger" ErrorMessage="Username is required" />
+                    <asp:ModelErrorMessage runat="server" ModelStateKey="Username" CssClass="text-error" />
                 </div>
             </div>
 
