@@ -3,8 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>&nbsp;
-            It&#39;s the ship... prepare to board the Princess Cruise.<asp:Image ID="Logo" runat="server" ImageAlign="Middle" ImageUrl="~/MainPage/8.jpg" Width="932px" Height="343px" />
+        <h1>It&#39;s the ship... prepare to board the Princess Cruise.<asp:Image ID="Logo" runat="server" ImageAlign="Middle" ImageUrl="~/MainPage/8.jpg" Width="932px" Height="343px" />
             </h1>
         <p class="lead">Princess Cruises and its British-based counterpart, the Cunard Line, are two of the largest cruise operators in the world, carrying over 1.5 million passengers per year on almost 20 luxury ships. Princess Cruises offers more than 115 cruise itineraries that sail to all seven continents and call at 350 ports located around the globe, while Cunard focuses on travel in the Atlantic Ocean and Mediterranean Sea. Both are owned by Carnival Corporation and are headquartered in Valencia, California </p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>

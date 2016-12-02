@@ -31,13 +31,13 @@ namespace PrincessCruise {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// POLDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList POLDropDown;
         
         /// <summary>
         /// SqlDataSource1 control.

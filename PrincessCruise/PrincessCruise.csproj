@@ -246,6 +246,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="About Us.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Gallery.aspx" />
     <Content Include="Itenary.aspx" />
@@ -481,6 +482,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="About Us.aspx.cs">
+      <DependentUpon>About Us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About Us.aspx.designer.cs">
+      <DependentUpon>About Us.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
