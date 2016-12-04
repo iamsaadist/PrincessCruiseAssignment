@@ -162,7 +162,7 @@ button,
 input,
 select,
 textarea {
-  margin: 0;
+  margin: 0 0 0 0px;
   font-family: inherit;
   font-size: 100%;
 }
@@ -518,8 +518,7 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
-    width: 251px;
-}
+    }
 
 h3,
 .h3 {
@@ -863,6 +862,9 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+    top: 0px;
+    left: 0px;
+    width: 621px;
 }
 
 .col-xs-1,
@@ -1410,6 +1412,8 @@ pre code {
 table {
   max-width: 100%;
   background-color: transparent;
+    margin-right: 0px;
+    margin-top: 0px;
 }
 
 th {

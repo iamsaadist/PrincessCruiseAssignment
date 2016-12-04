@@ -25,8 +25,17 @@ namespace PrincessCruise
         private void SetImageURL()
         {
             Random _rand = new Random();
-            int i = _rand.Next(1, 11);
+            int i = _rand.Next(1, 12);
             Image1.ImageUrl = "~/Assets/" + i.ToString() + ".jpg";
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("https://www.instagram.com/princesscruises/?hl=en");
+        }
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("https://www.instagram.com/explore/tags/princesscruise/");
         }
     }
 }
