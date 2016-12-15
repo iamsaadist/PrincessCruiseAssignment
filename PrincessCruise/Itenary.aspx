@@ -69,13 +69,76 @@
 </table>
             <%--&nbsp;--%>
 <br />
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 150px; height: 62px;">Room Category </td>
+                        <td style="width: 248px; height: 62px;">
+                            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource5" DataTextField="CategoryName" DataValueField="CategoryName" Height="29px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="200px">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:DDACConnectionString %>" SelectCommand="SELECT DISTINCT [CategoryName] FROM [Rooms]"></asp:SqlDataSource>
+                        </td>
+                        <td style="width: 150px; height: 62px;">Room Type </td>
+                        <td style="width: 248px; height: 62px;">
+                            <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource6" DataTextField="RoomName" DataValueField="RoomName" Height="31px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="199px">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:DDACConnectionString %>" SelectCommand="SELECT [RoomName] FROM [Rooms] WHERE ([CategoryName] = @CategoryName)">
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="DropDownList1" Name="CategoryName" PropertyName="SelectedValue" Type="String" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource7" ForeColor="Black" GridLines="Horizontal" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" Width="843px">
+                <Columns>
+                    <asp:BoundField DataField="RoomName" HeaderText="RoomName" SortExpression="RoomName" />
+                    <asp:BoundField DataField="RoomDescription" HeaderText="RoomDescription" SortExpression="RoomDescription" />
+                    <asp:BoundField DataField="RoomPrice" HeaderText="RoomPrice" SortExpression="RoomPrice" />
+                </Columns>
+                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                <HeaderStyle BackColor="#333333" BorderColor="#FFCC66" BorderStyle="Double" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                <SortedDescendingHeaderStyle BackColor="#242121" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:DDACConnectionString %>" SelectCommand="SELECT [RoomName], [RoomDescription], [RoomPrice] FROM [Rooms] WHERE (([CategoryName] = @CategoryName) AND ([RoomName] = @RoomName))">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="DropDownList1" Name="CategoryName" PropertyName="SelectedValue" Type="String" />
+                    <asp:ControlParameter ControlID="DropDownList2" Name="RoomName" PropertyName="SelectedValue" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
 <br />
+            <table>
+<tbody>
+<tr>
+<td>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource8" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1" Width="215px">
+        <Columns>
+            <asp:ImageField ControlStyle-Height="500" ControlStyle-Width="400" DataImageUrlField="ImagePath" DataImageUrlFormatString="~/{0}">
+                <ControlStyle Height="700px" Width="900px" />
+            </asp:ImageField>
+        </Columns>
+    </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:DDACConnectionString %>" SelectCommand="SELECT [ImagePath] FROM [Rooms] WHERE ([RoomName] = @RoomName)">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="DropDownList2" Name="RoomName" PropertyName="SelectedValue" Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    </td>
+</tr>
+</tbody>
+</table>
             <asp:ScriptManager ID="ScriptManager1" runat="server">
             </asp:ScriptManager>
         </ContentTemplate>
     </asp:UpdatePanel>
     <br />
-    <asp:Button ID="Button1" runat="server" Font-Names="Verdana" ForeColor="Black" Height="55px" OnClick="Button1_Click" Text="Choose Cruise Room" Width="222px" />
+    <asp:Button ID="Button1" runat="server" Font-Names="Verdana" ForeColor="Black" Height="55px" OnClick="Button1_Click" Text="BOOK!" Width="222px" />
     <br />
     <br />
 </asp:Content>

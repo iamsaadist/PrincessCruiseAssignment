@@ -162,9 +162,11 @@ button,
 input,
 select,
 textarea {
-  margin: 0 0 0 0px;
   font-family: inherit;
   font-size: 100%;
+    margin-left: 0px;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 button,
@@ -1414,6 +1416,8 @@ table {
   background-color: transparent;
     margin-right: 0px;
     margin-top: 0px;
+    width: 1051px;
+    height: 141px;
 }
 
 th {

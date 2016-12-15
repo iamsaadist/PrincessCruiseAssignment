@@ -59,11 +59,12 @@ namespace PrincessCruise
                appId: "1355660094457855",
               appSecret: "22b0c95067014467857931c3a367071f");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = "KVK09l2gSTFD3Re8sSUsRByYZKg"
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "170619408876-nc22q2ekb79tqu146tcpq8o1rr36k1dn.apps.googleusercontent.com",
+                ClientSecret = "F6IZ4q9-4mWDv7v8yOImyGpb"
+
+            });
         }
     }
 }
